@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PokemanPixelFont';
-  src: url('fonts/pokemon_pixel_font.ttf') format('truetype');
+  src: url('fonts/PokemonPixelFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -144,5 +144,5 @@ canvas {
   font-size: 12px;
   max-width: 320px;
   line-height: 1.3;
-  font-family: 'PokemanPixelFont', Arial, sans-serif;
+  font-family: 'PokemonPixelFont', Arial, sans-serif;
 }
