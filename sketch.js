@@ -1,4 +1,5 @@
 function setup() {
+  background(0); // Makes the canvas black before drawing the bars
   createCanvas(windowWidth, windowHeight);
   noLoop(); // We only need to draw this once
   drawDecorativeBar();

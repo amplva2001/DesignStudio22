@@ -31,3 +31,13 @@ html, body {
   height: auto;
   z-index: 1;
 }
+
+canvas {
+  position: fixed;     /* Sticks canvas to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;        /* Ensures it fills the screen */
+  height: 100vh;
+  z-index: 0;          /* Behind your .centered-content images */
+  pointer-events: none; /* So clicks pass through to images below */
+}
