@@ -20,6 +20,7 @@ function drawDecorativeBar() {
     '#787830',
     '#585820',
     '#383810'
+    '#252505'
   ];
   let barHeight = 20; // Height of each color bar
 
