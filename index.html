@@ -22,7 +22,7 @@
       function animateCartridge(time) {
         if (!startTime) startTime = time;
         const period = 2000; // ms for a full cycle (up and down)
-        const amplitude = 18; // px (how much it moves up and down)
+        const amplitude = 8; // px (how much it moves up and down)
         // Calculate vertical offset
         const t = ((time - startTime) % period) / period;
         const offset = Math.sin(t * 2 * Math.PI) * amplitude;
