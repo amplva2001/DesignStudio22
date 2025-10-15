@@ -1,6 +1,10 @@
 @font-face {
-  font-family: 'PokemanPixelFont';
-  src: url('fonts/PokemonPixelFont.ttf') format('truetype');
+  font-family: 'PokemonPixelFont';
+  src: url('fonts/PokemonPixelFont.eot');
+  src: url('fonts/PokemonPixelFont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/PokemonPixelFont.woff') format('woff'),
+       url('fonts/PokemonPixelFont.ttf') format('truetype'),
+       url('fonts/PokemonPixelFont.svg#PokemonPixelFont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
