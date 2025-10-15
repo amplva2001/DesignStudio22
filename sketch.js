@@ -1,4 +1,4 @@
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background('#000000');
+  background('#9b1a1aff');
 }
