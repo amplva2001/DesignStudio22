@@ -13,13 +13,13 @@ function windowResized() {
 function drawDecorativeBar() {
   // Array of colors from top to bottom (sampled from your image, adjust as needed)
   let colors = [
-    '#f8f58d',
-    '#f5f47a',
-    '#ebe45e',
-    '#d1c54f',
-    '#b6a63e',
-    '#998631',
-    '#7d6926'
+    '#F8F8A0',
+    '#D8D858',
+    '#B8B848',
+    '#989838',
+    '#787830',
+    '#585820',
+    '#383810'
   ];
   let barHeight = 20; // Height of each color bar
 
