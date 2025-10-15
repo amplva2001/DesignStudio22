@@ -17,7 +17,7 @@ html, body {
 }
 
 .cartridge {
-  margin-top: 170px; /* space from top */
+  margin-top: 200px; /* space from top */
   width: 300px; /* adjust as needed */
   max-width: 40vw;
   height: auto;
