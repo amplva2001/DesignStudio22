@@ -7,11 +7,11 @@
 
 /* Apply the font everywhere */
 body, html {
+  /* overflow: hidden;  <-- REMOVE this line */
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background: #000;
   font-family: 'PokemonPixelFont', Arial, sans-serif;
 }
@@ -21,7 +21,8 @@ body {
 }
 
 .main-content {
-  min-height: 100vh;
+  /* height: 100vh; */         /* REMOVE or comment out */
+  /* min-height: 100vh; */     /* REMOVE or comment out */
   width: 100vw;
   display: flex;
   flex-direction: column;
