@@ -1,13 +1,9 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background('#9b1a1aff'); // or your color
-}
-
-function draw() {
-  // your draw code
+  background(0); // black
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background('#9b1a1aff'); // or your color
+  background(0);
 }
