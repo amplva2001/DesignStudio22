@@ -7,16 +7,27 @@ html, body {
   background: #000;
 }
 
-.bg-image {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: url('landing-bg.png') no-repeat center center;
-  background-size: cover;
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cartridge {
+  margin-top: 50px; /* space from top */
+  width: 300px; /* adjust as needed */
+  max-width: 40vw;
+  height: auto;
   z-index: 1;
 }
 
-canvas {
-  display: block;
-  position: relative;
-  z-index: 2;
+.gba {
+  margin-top: 30px; /* space between cartridge and GBA */
+  width: 700px; /* adjust as needed */
+  max-width: 80vw;
+  height: auto;
+  z-index: 1;
 }
