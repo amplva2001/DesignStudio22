@@ -7,22 +7,17 @@
 
 /* Apply the font everywhere */
 body, html {
-  /* overflow: hidden;  <-- REMOVE this line */
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   background: #000;
   font-family: 'PokemonPixelFont', Arial, sans-serif;
 }
 
-body {
-  min-height: 100vh;
-}
 
 .main-content {
-  /* height: 100vh; */         /* REMOVE or comment out */
-  /* min-height: 100vh; */     /* REMOVE or comment out */
+  min-height: 150vh; /* or a value greater than 100vh to allow scrolling */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -62,7 +57,7 @@ body {
 
 /* Bottom bar layout */
 .bottom-bar {
-  width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
