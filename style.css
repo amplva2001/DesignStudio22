@@ -7,84 +7,84 @@ html, body {
   background: #000;
 }
 
-.centered-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
   height: 100vh;
   width: 100vw;
   position: relative;
 }
 
+/* Center the cartridge and GBA in the upper center */
+.center-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
 .cartridge {
-  margin-top: 200px; /* space from top */
-  width: 300px; /* adjust as needed */
-  max-width: 40vw;
+  width: 180px;
+  max-width: 20vw;
   height: auto;
-  z-index: 1;
-  transition: transform 0.3s cubic-bezier(0.4,2,0.6,1); /* smooth initial movement */
+  transition: transform 0.3s cubic-bezier(0.4,2,0.6,1);
   will-change: transform;
+  z-index: 2;
 }
 
 .gba {
-  margin-top: 30px; /* space between cartridge and GBA */
-  width: 700px; /* adjust as needed */
-  max-width: 80vw;
+  margin-top: 24px;
+  width: 420px;
+  max-width: 50vw;
   height: auto;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Bottom bar container */
+/* Bottom bar layout */
 .bottom-bar {
   position: absolute;
   left: 0;
-  bottom: 35px; /* adjust to move up/down */
+  bottom: 44px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 40px;
+  padding: 0 36px;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 3;
   color: #ccc;
   font-family: sans-serif;
   font-size: 15px;
 }
 
-/* Left side: logo, fineprint, rating icons */
+/* Left column */
 .bar-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-}
-
-/* Right side: fakemon and qr code */
-.bar-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   gap: 12px;
 }
 
 /* Bootendo logo */
 .bootendo {
-  width: 120px;
-  margin-bottom: 10px;
+  width: 96px;
+  margin-bottom: 8px;
 }
 
-/* Fineprint text block */
+/* Fineprint */
 .fineprint {
   color: #bbb;
-  font-size: 13px;
-  max-width: 350px;
+  font-size: 12px;
+  max-width: 320px;
+  line-height: 1.3;
 }
 
-/* Ratings area (ersb and seal) */
 .ratings {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   margin-top: 8px;
 }
 
@@ -93,26 +93,38 @@ html, body {
 }
 
 .seal {
-  width: 56px;
+  width: 52px;
 }
 
-.updated {
-  color: #666;
-  font-size: 11px;
-  margin-top: 8px;
+/* Right column */
+.bar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
-/* Fakemon logo */
 .fakemon {
-  width: 120px;
+  width: 104px;
 }
 
-/* QR barcode */
 .qrbar {
-  width: 110px;
-  opacity: 0.8;
+  width: 92px;
+  opacity: 0.85;
 }
 
+/* Last updated date */
+.updated {
+  position: absolute;
+  bottom: 12px;
+  left: 44px;
+  color: #777;
+  font-size: 11px;
+  font-family: sans-serif;
+  z-index: 4;
+}
+
+/* Canvas stays behind everything */
 canvas {
   position: fixed;
   top: 0;
