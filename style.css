@@ -22,6 +22,8 @@ html, body {
   max-width: 40vw;
   height: auto;
   z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.4,2,0.6,1); /* smooth initial movement */
+  will-change: transform;
 }
 
 .gba {
