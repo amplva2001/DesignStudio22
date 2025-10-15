@@ -14,6 +14,7 @@ html, body {
   justify-content: flex-start;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 .cartridge {
@@ -34,12 +35,90 @@ html, body {
   z-index: 1;
 }
 
+/* Bottom bar container */
+.bottom-bar {
+  position: absolute;
+  left: 0;
+  bottom: 35px; /* adjust to move up/down */
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 40px;
+  box-sizing: border-box;
+  z-index: 2;
+  color: #ccc;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+/* Left side: logo, fineprint, rating icons */
+.bar-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Right side: fakemon and qr code */
+.bar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+/* Bootendo logo */
+.bootendo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+/* Fineprint text block */
+.fineprint {
+  color: #bbb;
+  font-size: 13px;
+  max-width: 350px;
+}
+
+/* Ratings area (ersb and seal) */
+.ratings {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ersb {
+  width: 64px;
+}
+
+.seal {
+  width: 56px;
+}
+
+.updated {
+  color: #666;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+/* Fakemon logo */
+.fakemon {
+  width: 120px;
+}
+
+/* QR barcode */
+.qrbar {
+  width: 110px;
+  opacity: 0.8;
+}
+
 canvas {
-  position: fixed;     /* Sticks canvas to the viewport */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;        /* Ensures it fills the screen */
+  width: 100vw;
   height: 100vh;
-  z-index: 0;          /* Behind your .centered-content images */
-  pointer-events: none; /* So clicks pass through to images below */
+  z-index: 0;
+  pointer-events: none;
 }
