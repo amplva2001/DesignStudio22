@@ -31,6 +31,7 @@ body {
 }
 
 .center-stack {
+  padding-top: 80px; /* or margin-top: 80px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,7 @@ body {
 }
 
 .cartridge {
+  margin-top: 80px; /* or whatever amount works visually */
   width: 300px;
   max-width: 20vw;
   height: auto;
