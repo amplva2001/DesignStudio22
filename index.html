@@ -32,33 +32,33 @@
 </div>
 <div class="updated">Last updated on October 15, 2025</div>
   </div>
-    <script>
-      // Animate cartridge up/down on hover
-      const cartridge = document.getElementById('cartridge');
-      let animationId = null;
-      let startTime = null;
+<script>
+  // Animate cartridge up/down on hover
+  const cartridge = document.getElementById('cartridge');
+  let animationId = null;
+  let startTime = null;
 
-      function animateCartridge(time) {
-        if (!startTime) startTime = time;
-        const period = 2000; // ms for a full cycle (up and down)
-        const amplitude = 8; // px (how much it moves up and down)
-        // Calculate vertical offset
-        const t = ((time - startTime) % period) / period;
-        const offset = Math.sin(t * 2 * Math.PI) * amplitude;
-        cartridge.style.transform = `translateY(${offset}px)`;
-        animationId = requestAnimationFrame(animateCartridge);
-      }
+  function animateCartridge(time) {
+    if (!startTime) startTime = time;
+    const period = 2000; // ms for a full cycle (up and down)
+    const amplitude = 8; // px (how much it moves up and down)
+    // Calculate vertical offset
+    const t = ((time - startTime) % period) / period;
+    const offset = Math.sin(t * 2 * Math.PI) * amplitude;
+    cartridge.style.transform = `translateY(${offset}px)`;
+    animationId = requestAnimationFrame(animateCartridge);
+  }
 
-      cartridge.addEventListener('mouseenter', () => {
-        startTime = null;
-        animationId = requestAnimationFrame(animateCartridge);
-      });
+  cartridge.addEventListener('mouseenter', () => {
+    startTime = null;
+    animationId = requestAnimationFrame(animateCartridge);
+  });
 
-      cartridge.addEventListener('mouseleave', () => {
-        if (animationId) cancelAnimationFrame(animationId);
-        animationId = null;
-        cartridge.style.transform = 'translateY(0)';
-      });
-    </script>
+  cartridge.addEventListener('mouseleave', () => {
+    if (animationId) cancelAnimationFrame(animationId);
+    animationId = null;
+    cartridge.style.transform = 'translateY(0)';
+  });
+</script>
   </body>
 </html>
