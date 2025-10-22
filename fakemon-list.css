@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'PokemonPixelFont';
+  src: url('fonts/pokemon_pixel_font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'PokemonPixelFont', Arial, sans-serif;
+}
+
+.fakemon-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns for wide grid */
+  gap: 42px 28px; /* vertical, horizontal gaps */
+  justify-items: center;
+  align-items: end;
+  padding: 48px 36px 48px 36px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.fakemon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.fakemon-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: none;
+  margin-bottom: 7px;
+}
+
+.fakemon-name {
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 0 2px #000;
+  white-space: nowrap;
+}
+
+.fakemon-id {
+  font-size: 0.82em;
+  color: #bbb;
+  text-align: center;
+  text-shadow: 0 0 2px #000;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
