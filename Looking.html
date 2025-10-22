@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Looking Page</title>
+    <link rel="stylesheet" href="Looking.css" />
+    <style>
+      /* Zoom-in animation for page load */
+      body {
+        transform: scale(0.7);
+        opacity: 0;
+        transition: transform 0.6s, opacity 0.6s;
+      }
+      body.loaded {
+        transform: scale(1);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="center-stack">
+        <img src="elements/Cartridge_scroll.png" alt="Pokemon Snakewood cartridge" class="cartridge_scroll" id="cartridge_scroll" />
+        <img src="elements/gba_looking.png" alt="Game Boy Advance" class="gba_looking" />
+      </div>
+      <div class="middle-spacer"></div>
+      <div class="bottom-bar">
+        <div class="bar-left">
+          <a href="index.html">
+            <img src="elements/bootendo.png" alt="Bootendo logo" class="bootendo" />
+          </a>
+        </div>
+      </div>
+      <div class="updated">Last updated on October 15, 2025</div>
+    </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>

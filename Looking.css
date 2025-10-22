@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'PokemonPixelFont';
+  src: url('fonts/pokemon_pixel_font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'PokemonPixelFont', Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Add to Looking.css */
+body {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+body.loaded {
+  opacity: 1;
+}
+
+.main-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* Align content to the bottom */
+  align-items: center;         /* Center horizontally */
+  position: relative;
+}
+
+.center-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* No margin-top! */
+  margin-bottom: 60px;         /* Space from bottom of page */
+}
+
+.cartridge_scroll {
+  margin-bottom: 10px;        /* Slight overlap with GBA */
+  width: 350px;
+  max-width: 80vw;
+  height: auto;
+  z-index: 2;
+}
+
+.gba_looking {
+  margin-bottom: -220px;
+  width: 950px;
+  max-width: 80vw;
+  height: auto;
+  z-index: 2;
+  display: block;
+}
+
+/* Bootendo logo bottom left */
+.bottom-bar {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+}
+
+.boot {
+  background: transparent;
+  border: 2px solid #ff7300;
+  color: #ff7300;
+  border-radius: 16px;
+  padding: 6px 18px;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: inherit;
+  letter-spacing: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Optional hover effect */
+.boot:hover {
+  background: #ff7300;
+  color: #000;
+}
+
+.updated {
+  position: fixed;
+  bottom: 12px;
+  right: 24px;
+  color: #fff;
+  font-size: 0.95em;
+  opacity: 0.7;
+  font
+
+  .bootendo {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.bootendo:hover {
+  box-shadow: 0 0 12px #ff7300, 0 2px 8px #222;
+}
