@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure Builder - Generate Houses with Bricks</title>
+    <link rel="stylesheet" href="structure-builder.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="structure-builder.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" class="back-button">← Back to Home</a>
+      <h1>Structure Builder</h1>
+      <p class="subtitle">Build houses and structures using bricks</p>
+    </div>
+    
+    <div class="main-container">
+      <div class="controls-panel">
+        <h3>Brick Selection</h3>
+        <div class="brick-selector">
+          <button class="brick-btn active" data-brick="red" style="background-color: #C45847;">Red Brick</button>
+          <button class="brick-btn" data-brick="brown" style="background-color: #8B4513;">Brown Brick</button>
+          <button class="brick-btn" data-brick="gray" style="background-color: #808080;">Gray Brick</button>
+          <button class="brick-btn" data-brick="white" style="background-color: #F5F5DC;">White Brick</button>
+          <button class="brick-btn" data-brick="wood" style="background-color: #D2691E;">Wood Plank</button>
+          <button class="brick-btn" data-brick="roof" style="background-color: #8B0000;">Roof Tile</button>
+          <button class="brick-btn" data-brick="window" style="background-color: #87CEEB;">Window</button>
+          <button class="brick-btn" data-brick="door" style="background-color: #654321;">Door</button>
+        </div>
+        
+        <h3>Tools</h3>
+        <div class="tools">
+          <button class="tool-btn active" id="placeTool">🧱 Place Brick</button>
+          <button class="tool-btn" id="eraseTool">🗑️ Erase</button>
+          <button class="tool-btn" id="clearBtn">🗑️ Clear All</button>
+        </div>
+        
+        <h3>Actions</h3>
+        <div class="actions">
+          <button class="action-btn" id="saveBtn">💾 Save Structure</button>
+          <button class="action-btn" id="loadBtn">📂 Load Structure</button>
+          <button class="action-btn" id="exportBtn">📸 Export Image</button>
+        </div>
+        
+        <h3>Quick Structures</h3>
+        <div class="quick-structures">
+          <button class="quick-btn" id="simpleHouse">🏠 Simple House</button>
+          <button class="quick-btn" id="largeHouse">🏡 Large House</button>
+          <button class="quick-btn" id="tower">🗼 Tower</button>
+        </div>
+        
+        <div class="info">
+          <h4>Instructions:</h4>
+          <ul>
+            <li>Click on a brick type to select it</li>
+            <li>Click on the canvas to place bricks</li>
+            <li>Use the erase tool to remove bricks</li>
+            <li>Try the quick structures for inspiration!</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="canvas-container" id="canvasContainer">
+        <!-- p5.js canvas will be inserted here -->
+      </div>
+    </div>
+  </body>
+</html>
