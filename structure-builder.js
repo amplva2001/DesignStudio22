@@ -97,6 +97,11 @@ function drawBrick(col, row, brickType) {
   let y = row * BRICK_HEIGHT;
   let color = brickColors[brickType];
   
+  // Validate brick type
+  if (!color) {
+    return; // Skip invalid brick types
+  }
+  
   // Draw brick fill
   fill(color);
   stroke(0);
@@ -200,9 +205,13 @@ function saveStructure() {
 function loadStructure() {
   let structureData = localStorage.getItem('savedStructure');
   if (structureData) {
-    grid = JSON.parse(structureData);
-    drawGrid();
-    alert('Structure loaded successfully!');
+    try {
+      grid = JSON.parse(structureData);
+      drawGrid();
+      alert('Structure loaded successfully!');
+    } catch (e) {
+      alert('Error loading structure: corrupted data');
+    }
   } else {
     alert('No saved structure found!');
   }
